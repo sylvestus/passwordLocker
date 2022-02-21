@@ -14,3 +14,30 @@ class Credidential:
     def deleteCred(self):
         Credidential.deleteCred.remove(self)
     
+    @classmethod
+    def displaycred(cls):
+        return cls.credList
+
+    @classmethod
+    def verify(cls,username,password):
+        accountUser =""
+        for user in User.userList:
+            if User.username == username and User.password == password:
+                accountUser = username
+                return accountUser
+    
+    @classmethod
+    def findcred(cls,accountType):
+        for credidential in cls.credList:
+            if credidential.accountType == accountType:
+                return credidential
+
+    @classmethod
+    def if_exist(cls,accountType):
+        for credidential in cls.credList:
+            return True
+
+    
+
+
+
