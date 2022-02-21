@@ -26,6 +26,12 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.my_cred.username,'silvano36')
         self.assertEqual(self.my_cred.password,'I34306488') 
 
-   
+    def test_addCred(self):
+        """
+        test case to test if the crential object is saved into the credentials list.
+        """
+        self.my_cred.addCred()
+        self.assertEqual(len(Credidential.credList),1)
+
 if __name__ == '__main__':
         unittest.main()
