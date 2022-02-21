@@ -11,4 +11,6 @@ class Credidential:
     def addCred(self):
         Credidential.credList.append(self)
     
+    def deleteCred(self):
+        Credidential.deleteCred.remove(self)
     
