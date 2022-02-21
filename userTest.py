@@ -34,7 +34,16 @@ class Testuser(unittest.TestCase):
         self.new_user.displayUser()
         self.assertTrue(len(User.userList))
 
+    def test_generate_password(self):
+        '''
+        check if the new instance of the user object has been created
+        '''
+        
+        self.new_user.generate_password()
+        self.assertTrue(User.password)
+ 
 
+    
 
 if __name__ == '__main__':
         unittest.main()
