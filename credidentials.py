@@ -8,4 +8,7 @@ class Credidential:
         self.password = password
     
     credList = []
+    def addCred(self):
+        Credidential.credList.append(self)
+    
     
