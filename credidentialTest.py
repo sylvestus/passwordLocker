@@ -54,5 +54,16 @@ class TestCredentials(unittest.TestCase):
         
         self.assertEqual(len(Credidential.credList),2)
 
+    def test_if_exist(self):
+        """
+        test to check if we can return a true or false based on whether we find or can't find the credential.
+        """
+        self.my_cred.addCred()
+        test_creditial = Credidential('facebook','silvano36','I34306488')
+        test_creditial.addCred()
+        
+        find = Credidential.if_exist("gideon")
+        self.assertTrue(find)
+
 if __name__ == '__main__':
         unittest.main()
