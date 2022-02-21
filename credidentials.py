@@ -25,4 +25,9 @@ class Credidential:
             if User.username == username and User.password == password:
                 accountUser = username
                 return accountUser
-  
+    
+    @classmethod
+    def findcred(cls,accountType):
+        for credidential in cls.credList:
+            if credidential.accountType == accountType:
+                return credidential
