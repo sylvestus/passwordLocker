@@ -65,5 +65,17 @@ class TestCredentials(unittest.TestCase):
         find = Credidential.if_exist("gideon")
         self.assertTrue(find)
 
+    def test_delete_credential(self):
+        """
+        test method to test if we can remove an account credentials from our credentials_list
+        """
+        self.my_cred.addCred()
+        test_cred = Credidential('facebook','silvano36','I34306488')
+        test_cred.addCred()
+        
+        
+        self.my_cred.deleteCred()
+        self.assertEqual(len(Credidential.credList,1))
+
 if __name__ == '__main__':
         unittest.main()
