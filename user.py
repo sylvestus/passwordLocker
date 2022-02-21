@@ -21,7 +21,18 @@ class User:
         '''   
        User.userList.remove(self)
        
-   
+    @classmethod
+    def displayUser(cls):
+        return cls.userList
+
+    def generate_password(self):
+        '''
+        generate random password consisting of letters
+        '''
+        password = string.ascii_uppercase + string.ascii_lowercase
+        return ''.join(random.choice(password) for i in range(1,9))
+
+    
 
        
 
