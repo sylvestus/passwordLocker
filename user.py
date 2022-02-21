@@ -9,11 +9,10 @@ class User:
         self.password = password
 
     userList = []
-    
-    
+    def addUser(self):
+        '''
+        method saves a new user object to credentials list
+        '''
+        User.userList.append(self)
 
-       
-
-
-
-        
+   
