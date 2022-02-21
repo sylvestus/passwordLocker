@@ -31,3 +31,13 @@ class Credidential:
         for credidential in cls.credList:
             if credidential.accountType == accountType:
                 return credidential
+
+    @classmethod
+    def if_exist(cls,accountType):
+        for credidential in cls.credList:
+            return True
+
+    
+
+
+
